@@ -46,7 +46,6 @@ export const MapContainer = (props) => {
 
   function searchNearby(map, center) {
     const service = new google.maps.places.PlacesService(map);
-    dispatch(setRestaurants([]));
 
     const request = {
       location: center,
@@ -70,13 +69,13 @@ export const MapContainer = (props) => {
     if (query) {
       searchByQuery(query);
     }
-  }, [query]);
+  });
 
   useEffect(() => {
     if (placeId) {
       getRestaurantById(placeId);
     }
-  }, [placeId]);
+  });
 
   return (
     <Map
