@@ -27,6 +27,7 @@ const Home = () => {
   const { restaurants, restaurantSelected } = useSelector((state) => state.restaurants);
 
   const settings = {
+    arrows: false,
     dots: false,
     infinite: true,
     autoplay: true,
